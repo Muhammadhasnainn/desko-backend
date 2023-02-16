@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use("/api/auth/", authRoute);
-app.use("/api/settings", settingRoute);
+// app.use("/api/auth/", authRoute);
+// app.use("/api/settings", settingRoute);
 
 // Connection
 const Connect = async () => {
