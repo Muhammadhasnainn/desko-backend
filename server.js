@@ -30,7 +30,7 @@ const Connect = async () => {
   }
 };
 
-app.listen(8800, () => {
+app.listen(process.env.PORT || 8800, () => {
   Connect();
   console.log("Connected");
 });
