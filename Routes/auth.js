@@ -7,7 +7,7 @@ import {
   verifyTokenAndAdmin,
 } from "../Middlewares/verifyUser.js";
 import { OAuth2Client } from "google-auth-library";
-import {ChangePassword, generateOTP, verifyOTP,resetPassword} from "../controllers/authController.js";
+import {ChangePassword, generateOTP, verifyOTP,resetPassword} from "../Controllers/authController.js";
 
 const router = Router();
 const JWT_SECRET = "Thisisasecretkey";
