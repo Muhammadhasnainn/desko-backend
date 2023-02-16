@@ -7,7 +7,7 @@ import {
   verifyTokenAndAdmin,
 } from "../Middlewares/verifyUser.js";
 import { OAuth2Client } from "google-auth-library";
-import * as controller from "../controllers/authController.js";
+import {ChangePassword, generateOTP, verifyOTP,resetPassword} from "../controllers/authController.js";
 
 const router = Router();
 const JWT_SECRET = "Thisisasecretkey";
@@ -93,19 +93,19 @@ router.post("/google-login", async (req, res) => {
 
 // OTP Generate
 router.get("/generateotp", localVariables, async (req, res) =>
-  controller.generateOTP(req, res)
+  generateOTP(req, res)
 );
 
-router.post("/verifyotp", async (req, res) => controller.verifyOTP(req, res));
+router.post("/verifyotp", async (req, res) => verifyOTP(req, res));
 
 router.get("/createResetSession", (req, res) =>
-  controller.createResetSession(req, res)
+  createResetSession(req, res)
 );
 
-router.put("/resetPassword", (req, res) => controller.resetPassword(req, res));
+router.put("/resetPassword", (req, res) => resetPassword(req, res));
 
 router.put("/changepassword", (req, res) =>
-  controller.ChangePassword(req, res)
+  ChangePassword(req, res)
 );
 
 export default router;
