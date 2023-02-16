@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import authRoute from "./Routes/auth.js";
-import settingRoute from "./Routes/settings.js";
+// import authRoute from "./Routes/auth.js";
+// import settingRoute from "./Routes/settings.js";
 
 const app = express();
 dotenv.config();
@@ -30,7 +30,7 @@ const Connect = async () => {
   }
 };
 
-app.get("/", (req,res)=>res.send("Working"))
+app.get("/", (req,res)=> res.send("Working"))
 
 app.listen(process.env.PORT || 8800, () => {
   // Connect();
