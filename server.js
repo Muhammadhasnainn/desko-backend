@@ -2,8 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-// import authRoute from "./Routes/auth.js";
-// import settingRoute from "./Routes/settings.js";
+import authRoute from "./Routes/auth.js";
+import settingRoute from "./Routes/settings.js";
 
 const app = express();
 dotenv.config();
@@ -13,8 +13,8 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-// app.use("/api/auth/", authRoute);
-// app.use("/api/settings", settingRoute);
+app.use("/api/auth/", authRoute);
+app.use("/api/settings", settingRoute);
 
 // Connection
 const Connect = async () => {
