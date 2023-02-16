@@ -30,6 +30,8 @@ const Connect = async () => {
   }
 };
 
+app.get("/", (req,res)=>res.send("Working"))
+
 app.listen(process.env.PORT || 8800, () => {
   Connect();
   console.log("Connected");
